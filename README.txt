@@ -3,7 +3,7 @@ Contributors: melonpan
 Tags: gutenberg, demo, demo-content, block, content, blocks, dummy
 Requires at least: 5.2
 Tested up to: 5.2
-Stable tag: 1.0.1
+Stable tag: 1.1.0
 Requires PHP: 7.1
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
@@ -13,7 +13,7 @@ Add blocks with demo/dummy content to your post in one click.
 == Description ==
 
 Add blocks with demo/dummy content to your post in one click. This plugin can be used to quickly add blocks with predefined content to your posts.
-Also, if you are a developer you can use the plugin to set blocks with your own content. This way users will be able to add blocks with content already set.
+If you are a developer the plugin can be used to set blocks with your own content This way users will be able to add blocks with content already set.
 
 == Usage ==
 
@@ -149,6 +149,11 @@ Click the More button and inside the menu list click on the plugin name "Demo Co
 
 
 == Changelog ==
+
+= 1.1.0 =
+* Improved code base. Migrated JavaScript to TypeScript.
+* Merged upload images in a single call.
+* Fixed styling.
 
 = 1.0.1 =
 * Fix "custom_images" property, from dc_resolve to dcfb_resolve.
