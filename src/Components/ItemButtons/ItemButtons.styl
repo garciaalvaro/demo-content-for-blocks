@@ -1,0 +1,36 @@
+/**
+ * ItemButtons
+ */
+
+@import('./_menu.styl')
+
+$e_deceleration = cubic-bezier(0.0, 0.0, 0.2, 1)
+
++prefix-classes('dcfb-')
+
+	.item-buttons
+		position absolute
+		top 10px
+		right 10px
+		display flex
+		justify-content flex-end
+
+		.button-item
+			opacity 0.1
+			transition margin-bottom .2s $e_deceleration, opacity .1s $e_deceleration
+			display flex
+			justify-content center
+			flex-direction column
+			border none
+			outline none
+			box-shadow none
+			line-height 3
+			padding 5px 3px
+			margin 5px 0
+			text-transform uppercase
+			cursor pointer
+			font-weight 500
+
+			.item:hover &
+			&.is_open
+				opacity 1

@@ -1,0 +1,44 @@
+/**
+ * BlockGroup
+ */
+
++prefix-classes('dcfb-')
+
+	.group
+		--background_color #f8f8f8
+
+	.group:last-child .group-content
+		padding-bottom 100px
+
+	.group-description-paragraph
+		padding 15px 20px 30px
+		margin 0
+
+	.group-title
+		padding 30px 20px 0
+
+	.group-header
+		position relative
+		background-color var(--background_color)
+		border-bottom 1px solid rgba(0,0,0,0.05)
+
+		&
+		.group-title
+		.group-description-paragraph
+			color var(--color)
+
+		.button
+			color inherit
+			cursor pointer
+			position absolute
+			top 10px
+			right 10px
+			padding 5px
+
+			#dcfb-container &:hover
+			#dcfb-container &:focus
+				box-shadow none
+				background none
+				outline none
+				border none
+				color inherit

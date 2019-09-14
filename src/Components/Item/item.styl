@@ -1,0 +1,62 @@
+/**
+ * Item
+ */
+
+$e_deceleration = cubic-bezier(0.0, 0.0, 0.2, 1)
+
++prefix-classes('dcfb-')
+
+	.item
+		position relative
+		padding 25px 20px 12px
+		border-bottom 1px dotted rgba(0,0,0,0.15)
+
+		&:before
+			content ""
+			position absolute
+			top 0
+			left 0
+			width 100%
+			height 100%
+			opacity 0
+			background-color var(--background_color)
+			z-index -1
+			transition opacity .2s $e_deceleration
+
+		&.no-is_media_ready
+
+			.item-header
+				opacity .5
+
+			&:hover:before
+			&:before
+				opacity .04
+
+			&:hover
+
+				.item-notice
+					background rgba(255,255,255,0.9)
+
+		&:hover
+			&:before
+				opacity .2
+
+	.item-notice
+		border 1px solid rgba(0,0,0,0.15)
+		padding 10px
+		margin 20px 0 10px 0
+		background rgba(255,255,255,0.5)
+
+	.item-title
+		margin-top 0
+		margin-bottom 1em
+		color rgba(0,0,0,0.9)
+
+	.item-description-paragraph
+		color rgba(0,0,0,0.85)
+
+	.item-image-container
+		border 1px solid rgba(0,0,0,0.1)
+
+	.item-image
+		display block
