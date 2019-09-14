@@ -13,7 +13,7 @@ Add blocks with demo/dummy content to your post in one click.
 == Description ==
 
 Add blocks with demo/dummy content to your post in one click. This plugin can be used to quickly add blocks with predefined content to your posts.
-Also, if you are a developer you can use the plugin to set blocks with your own content. This way users will be able to add blocks with content already set.
+If you are a developer the plugin can be used to set blocks with your own content This way users will be able to add blocks with content already set.
 
 == Usage ==
 
