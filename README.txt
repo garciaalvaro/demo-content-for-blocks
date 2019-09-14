@@ -150,6 +150,11 @@ Click the More button and inside the menu list click on the plugin name "Demo Co
 
 == Changelog ==
 
+= 1.1.0 =
+* Improved code base. Migrated JavaScript to TypeScript.
+* Merged upload images in a single call.
+* Fixed styling.
+
 = 1.0.1 =
 * Fix "custom_images" property, from dc_resolve to dcfb_resolve.
 
