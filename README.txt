@@ -15,12 +15,16 @@ Add blocks with demo/dummy content to your post in one click.
 Add blocks with demo/dummy content to your post in one click. This plugin can be used to quickly add blocks with predefined content to your posts.
 If you are a developer the plugin can be used to set blocks with your own content This way users will be able to add blocks with content already set.
 
+[GitHub repository](https://github.com/garciaalvaro/demo-content-for-blocks)
+
+
 == Usage ==
 
 Inside the Post editor on the right side of the top Block's Toolbar the plugin icon/button should appear (if not, please read the FAQ below).
 Click the icon/button to open the plugin sidebar.
 By default two panels appear, single core blocks and multiple core blocks.
 Click the ADD or REPLACE buttons to insert the block with its demo content inside the editor.
+
 
 == Installation ==
 
@@ -31,6 +35,7 @@ Installation from the WordPress admin.
 3. In the results list *Demo Content for Blocks* plugin should appear, click **Install Now** button.
 4. Once it finished installing, click the *Activate* button.
 5. Now you can go to any post where the Block editor is enabled.
+
 
 == Frequently Asked Questions ==
 
