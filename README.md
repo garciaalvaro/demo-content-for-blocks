@@ -6,7 +6,7 @@ WordPress plugin that provides utilities to quickly add blocks with predefined c
 
 If you are a developer the plugin can be used to set blocks with your own content. This way users will be able to add blocks with content already set. To check the documentation please refer to the [WordPress repository](https://wordpress.org/plugins/demo-content-for-blocks/) (until the documentation page is finished).
 
-<img src="assets-repo/screenshot-1.png" width="700px" alt="Default Single core blocks panel." />
+<img src="assets-repo/screenshot-1.jpg" width="700px" alt="Default Single core blocks panel." />
 
 <br />
 
