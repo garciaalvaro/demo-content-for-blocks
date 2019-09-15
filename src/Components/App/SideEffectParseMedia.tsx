@@ -78,6 +78,12 @@ export const SideEffectParseMedia = compose([
 								group.namespace,
 								uploaded_images_with_media
 							);
+
+							block.innerBlocks = parseMediaDependency(
+								block.innerBlocks,
+								group.namespace,
+								uploaded_images_with_media
+							);
 						}
 
 						return block;
