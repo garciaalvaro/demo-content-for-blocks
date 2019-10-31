@@ -18,4 +18,5 @@ The plugin can be used to set blocks with your own content. This way users will 
 
 ## Screenshots
 
-<img src="assets-repo/screenshot-1.jpg" width="700px" alt="Default Single core blocks panel." />
+<img src="assets-repo/screenshot-1.jpg" width="700px" alt="Plugin sidebar" />
+<img src="assets-repo/screenshot-2.jpg" width="700px" alt="Default Single core blocks panel" />

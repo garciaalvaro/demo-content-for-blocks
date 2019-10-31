@@ -64,10 +64,13 @@ Click the More button and inside the menu list click on the plugin name "Demo Co
 = 1.0.0 =
 * Initial release.
 
+
 == Credits ==
 
 Images included in the plugin belong to [Charles Postiaux](https://unsplash.com/@charlpost).
 
+
 == Screenshots ==
 
-1. Default Single core blocks panel.
+1. Plugin sidebar
+2. Default Single core blocks panel
