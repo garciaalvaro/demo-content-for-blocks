@@ -27,7 +27,8 @@ module.exports = [
 						"src/**",
 						"jest.*",
 						"*config.js",
-						"*config.json"
+						"*config.json",
+						"webpack/**"
 					]
 				}
 			])
