@@ -1,7 +1,9 @@
+import path from "path";
+
 export default {
-	entry: __dirname + "/pragma.entry.js",
+	entry: path.join(__dirname, "pragma.entry.js"),
 	output: {
-		path: __dirname + "/../_release/inc",
+		path: path.join(__dirname, "../_release/inc"),
 		filename: "_temp.js"
 	},
 	module: {
