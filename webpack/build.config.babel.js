@@ -54,7 +54,10 @@ export default {
 						loader: "stylus-loader",
 						options: {
 							use: [nib()],
-							import: ["~nib/index.styl"]
+							import: [
+								"~nib/index.styl",
+								path.join(__dirname, "../src/utils/data/stylus_variables.styl")
+							]
 						}
 					}
 				]
