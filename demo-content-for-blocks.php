@@ -4,7 +4,7 @@
  * Plugin URI: https://wordpress.org/plugins/demo-content-for-blocks/
  * Description: Add blocks with demo/dummy content to your post content in one click.
  * Author: melonpan
- * Version: 1.1.1
+ * Version: 1.1.2
  * License: GPL3+
  * License URI: http://www.gnu.org/licenses/gpl-3.0.txt
  */
@@ -15,7 +15,7 @@ namespace DEMOCONTENTFORBLOCKS;
 if ( ! defined( 'ABSPATH' ) ) { exit; }
 
 if ( ! defined( __NAMESPACE__ . '\PLUGIN_VERSION' ) ) {
-	define( __NAMESPACE__ . '\PLUGIN_VERSION', '1.1.1' );
+	define( __NAMESPACE__ . '\PLUGIN_VERSION', '1.1.2' );
 }
 if ( ! defined( __NAMESPACE__ . '\PLUGIN_NAME' ) ) {
 	define( __NAMESPACE__ . '\PLUGIN_NAME', 'demo-content-for-blocks' );
