@@ -50,6 +50,9 @@ Click the More button and inside the menu list click on the plugin name "Demo Co
 
 == Changelog ==
 
+= 1.1.2 =
+* Minor bugfixes.
+
 = 1.1.1 =
 * Fixed bug where innerBlocks custom image props were not being parsed.
 
