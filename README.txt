@@ -2,8 +2,8 @@
 Contributors: melonpan
 Tags: gutenberg, demo, demo-content, block, content, blocks, dummy
 Requires at least: 5.2
-Tested up to: 5.2
-Stable tag: 1.1.1
+Tested up to: 5.3
+Stable tag: 1.1.2
 Requires PHP: 7.1
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
@@ -49,6 +49,9 @@ Click the More button and inside the menu list click on the plugin name "Demo Co
 
 
 == Changelog ==
+
+= 1.1.2 =
+* Minor bugfixes.
 
 = 1.1.1 =
 * Fixed bug where innerBlocks custom image props were not being parsed.
