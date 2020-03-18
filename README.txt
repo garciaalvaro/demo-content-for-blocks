@@ -50,22 +50,27 @@ Click the More button and inside the menu list click on the plugin name "Demo Co
 
 == Changelog ==
 
+= 1.2.0 =
+* Added linter for development
+* Updated dependencies and types
+* Minor bugfixes
+
 = 1.1.2 =
-* Minor bugfixes.
+* Minor bugfixes
 
 = 1.1.1 =
-* Fixed bug where innerBlocks custom image props were not being parsed.
+* Fixed bug where innerBlocks custom image props were not being parsed
 
 = 1.1.0 =
-* Improved code base. Migrated JavaScript to TypeScript.
-* Merged upload images in a single call.
-* Fixed styling.
+* Improved code base. Migrated JavaScript to TypeScript
+* Merged upload images in a single call
+* Fixed styling
 
 = 1.0.1 =
-* Fix "custom_images" property, from dc_resolve to dcfb_resolve.
+* Fix "custom_images" property, from dc_resolve to dcfb_resolve
 
 = 1.0.0 =
-* Initial release.
+* Initial release
 
 
 == Credits ==
