@@ -444,15 +444,20 @@ export const block_group: BlockGroupRaw = {
 			]
 		},
 		{
-			title: `Button`,
-			description: __(`Button block.`),
+			title: `Buttons`,
+			description: __(`Buttons block.`),
 			blocks: [
 				{
-					name: "core/button",
-					attributes: {
-						text: "Lorem ipsum",
-						url: "https://example.com/"
-					}
+					name: "core/buttons",
+					innerBlocks: [
+						{
+							name: "core/button",
+							attributes: {
+								text: "Lorem ipsum",
+								url: "https://example.com/"
+							}
+						}
+					]
 				}
 			]
 		},
