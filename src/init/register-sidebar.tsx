@@ -9,6 +9,7 @@ import { App } from "Components/App/App";
 registerPlugin(plugin_namespace, {
 	// @ts-ignore
 	icon: <Icon icon="logo" />,
+
 	render: () => (
 		<Fragment>
 			<PluginSidebar name={plugin_namespace} title={plugin_title}>

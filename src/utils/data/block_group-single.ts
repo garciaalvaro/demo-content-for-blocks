@@ -206,7 +206,8 @@ export const block_group: BlockGroupRaw = {
 								id: "dcfb.charles-postiaux-1566455.id",
 								alt: "dcfb.charles-postiaux-1566455.alt_text",
 								link: "dcfb.charles-postiaux-1566455.link",
-								caption: "dcfb.charles-postiaux-1566455.caption.rendered"
+								caption:
+									"dcfb.charles-postiaux-1566455.caption.rendered"
 							},
 							{
 								url:
@@ -214,7 +215,8 @@ export const block_group: BlockGroupRaw = {
 								id: "dcfb.charles-postiaux-1539815.id",
 								alt: "dcfb.charles-postiaux-1539815.alt_text",
 								link: "dcfb.charles-postiaux-1539815.link",
-								caption: "dcfb.charles-postiaux-1539815.caption.rendered"
+								caption:
+									"dcfb.charles-postiaux-1539815.caption.rendered"
 							},
 							{
 								url:
@@ -222,7 +224,8 @@ export const block_group: BlockGroupRaw = {
 								id: "dcfb.charles-postiaux-1551992.id",
 								alt: "dcfb.charles-postiaux-1551992.alt_text",
 								link: "dcfb.charles-postiaux-1551992.link",
-								caption: "dcfb.charles-postiaux-1551992.caption.rendered"
+								caption:
+									"dcfb.charles-postiaux-1551992.caption.rendered"
 							}
 						]
 					}
@@ -250,7 +253,8 @@ export const block_group: BlockGroupRaw = {
 								id: "dcfb.charles-postiaux-1566455.id",
 								alt: "dcfb.charles-postiaux-1566455.alt_text",
 								link: "dcfb.charles-postiaux-1566455.link",
-								caption: "dcfb.charles-postiaux-1566455.caption.rendered"
+								caption:
+									"dcfb.charles-postiaux-1566455.caption.rendered"
 							},
 							{
 								url:
@@ -258,7 +262,8 @@ export const block_group: BlockGroupRaw = {
 								id: "dcfb.charles-postiaux-1539815.id",
 								alt: "dcfb.charles-postiaux-1539815.alt_text",
 								link: "dcfb.charles-postiaux-1539815.link",
-								caption: "dcfb.charles-postiaux-1539815.caption.rendered"
+								caption:
+									"dcfb.charles-postiaux-1539815.caption.rendered"
 							},
 							{
 								url:
@@ -266,7 +271,8 @@ export const block_group: BlockGroupRaw = {
 								id: "dcfb.charles-postiaux-1551992.id",
 								alt: "dcfb.charles-postiaux-1551992.alt_text",
 								link: "dcfb.charles-postiaux-1551992.link",
-								caption: "dcfb.charles-postiaux-1551992.caption.rendered"
+								caption:
+									"dcfb.charles-postiaux-1551992.caption.rendered"
 							},
 							{
 								url:
@@ -274,7 +280,8 @@ export const block_group: BlockGroupRaw = {
 								id: "dcfb.charles-postiaux-1458142.id",
 								alt: "dcfb.charles-postiaux-1458142.alt_text",
 								link: "dcfb.charles-postiaux-1458142.link",
-								caption: "dcfb.charles-postiaux-1458142.caption.rendered"
+								caption:
+									"dcfb.charles-postiaux-1458142.caption.rendered"
 							}
 						]
 					}
@@ -302,7 +309,8 @@ export const block_group: BlockGroupRaw = {
 								id: "dcfb.charles-postiaux-1566455.id",
 								alt: "dcfb.charles-postiaux-1566455.alt_text",
 								link: "dcfb.charles-postiaux-1566455.link",
-								caption: "dcfb.charles-postiaux-1566455.caption.rendered"
+								caption:
+									"dcfb.charles-postiaux-1566455.caption.rendered"
 							},
 							{
 								url:
@@ -310,7 +318,8 @@ export const block_group: BlockGroupRaw = {
 								id: "dcfb.charles-postiaux-1539815.id",
 								alt: "dcfb.charles-postiaux-1539815.alt_text",
 								link: "dcfb.charles-postiaux-1539815.link",
-								caption: "dcfb.charles-postiaux-1539815.caption.rendered"
+								caption:
+									"dcfb.charles-postiaux-1539815.caption.rendered"
 							},
 							{
 								url:
@@ -318,7 +327,8 @@ export const block_group: BlockGroupRaw = {
 								id: "dcfb.charles-postiaux-1551992.id",
 								alt: "dcfb.charles-postiaux-1551992.alt_text",
 								link: "dcfb.charles-postiaux-1551992.link",
-								caption: "dcfb.charles-postiaux-1551992.caption.rendered"
+								caption:
+									"dcfb.charles-postiaux-1551992.caption.rendered"
 							},
 							{
 								url:
@@ -326,7 +336,8 @@ export const block_group: BlockGroupRaw = {
 								id: "dcfb.charles-postiaux-1458142.id",
 								alt: "dcfb.charles-postiaux-1458142.alt_text",
 								link: "dcfb.charles-postiaux-1458142.link",
-								caption: "dcfb.charles-postiaux-1458142.caption.rendered"
+								caption:
+									"dcfb.charles-postiaux-1458142.caption.rendered"
 							}
 						]
 					}
@@ -696,7 +707,8 @@ export const block_group: BlockGroupRaw = {
 									name: "core/image",
 									attributes: {
 										id: "dcfb.charles-postiaux-1458142.id",
-										link: "dcfb.charles-postiaux-1458142.link",
+										link:
+											"dcfb.charles-postiaux-1458142.link",
 										url:
 											"dcfb.charles-postiaux-1458142.media_details.sizes.large.source_url",
 										alt: "Charles Postiaux image",
@@ -729,7 +741,8 @@ export const block_group: BlockGroupRaw = {
 									name: "core/image",
 									attributes: {
 										id: "dcfb.charles-postiaux-1539815.id",
-										link: "dcfb.charles-postiaux-1539815.link",
+										link:
+											"dcfb.charles-postiaux-1539815.link",
 										url:
 											"dcfb.charles-postiaux-1539815.media_details.sizes.large.source_url",
 										alt: "Charles Postiaux image",

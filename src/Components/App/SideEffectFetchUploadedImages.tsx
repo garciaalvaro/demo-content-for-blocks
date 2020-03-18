@@ -5,13 +5,13 @@ import { compose } from "@wordpress/compose";
 
 import { store_slug } from "utils/data";
 
-interface WithDispatchProps extends Pick<ActionCreators, "setUploadedImages"> {}
+type WithDispatchProps = Pick<ActionCreators, "setUploadedImages">;
 
-interface WithSelectProps {
+type WithSelectProps = {
 	uploaded_images: State["uploaded_images"];
-}
+};
 
-interface Props extends WithDispatchProps, WithSelectProps {}
+type Props = WithDispatchProps & WithSelectProps;
 
 export const SideEffectFetchUploadedImages = compose([
 	withDispatch<WithDispatchProps>(dispatch => ({

@@ -8,9 +8,9 @@ import { store_slug } from "utils/data";
 import { BlockGroup } from "../BlockGroup/BlockGroup";
 import { UploadImages } from "../UploadImages/UploadImages";
 
-interface WithSelectProps {
+type WithSelectProps = {
 	groups: BlockGroup[];
-}
+};
 
 export const BlockGroups: React.ComponentType = withSelect<WithSelectProps>(
 	select => ({ groups: select(store_slug).getBlockGroups() })

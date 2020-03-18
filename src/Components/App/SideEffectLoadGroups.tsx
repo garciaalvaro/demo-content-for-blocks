@@ -6,13 +6,13 @@ import { applyFilters } from "@wordpress/hooks";
 import { store_slug } from "utils/data";
 import { prepareBlockGroups } from "utils/tools";
 
-interface WithDispatchProps extends Pick<ActionCreators, "updateBlockGroups"> {}
+type WithDispatchProps = Pick<ActionCreators, "updateBlockGroups">;
 
-interface WithSelectProps {
+type WithSelectProps = {
 	block_groups: State["block_groups"];
-}
+};
 
-interface Props extends WithDispatchProps, WithSelectProps {}
+type Props = WithDispatchProps & WithSelectProps;
 
 export const SideEffectLoadGroups = compose([
 	withDispatch<WithDispatchProps>(dispatch => ({
@@ -34,7 +34,10 @@ export const SideEffectLoadGroups = compose([
 				"core/editor"
 			).getCurrentPostType();
 
-			const groups_raw: BlockGroupRaw[] = applyFilters("dcfb.addGroup", []);
+			const groups_raw: BlockGroupRaw[] = applyFilters(
+				"dcfb.addGroup",
+				[]
+			);
 
 			const groups = prepareBlockGroups(groups_raw, current_post_type);
 

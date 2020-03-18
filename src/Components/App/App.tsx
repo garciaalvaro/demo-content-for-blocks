@@ -5,7 +5,7 @@ import { SideEffectFetchUploadedImages } from "./SideEffectFetchUploadedImages";
 import { SideEffectLoadGroups } from "./SideEffectLoadGroups";
 import { SideEffectParseMedia } from "./SideEffectParseMedia";
 
-export const App: React.ComponentType = props => {
+export const App: React.ComponentType = () => {
 	return (
 		<Div id="container">
 			<SideEffectFetchUploadedImages />

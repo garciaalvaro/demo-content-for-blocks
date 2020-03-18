@@ -71,8 +71,14 @@ export const prepareBlockGroups = (
 			item.media_dependencies = uniq(
 				flatten(
 					item.blocks.map(block => [
-						...getMediaDependencies(block.attributes, group.namespace),
-						...getMediaDependencies(block.innerBlocks, group.namespace)
+						...getMediaDependencies(
+							block.attributes,
+							group.namespace
+						),
+						...getMediaDependencies(
+							block.innerBlocks,
+							group.namespace
+						)
 					])
 				)
 			);

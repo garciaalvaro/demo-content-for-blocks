@@ -4,9 +4,9 @@ import { __ } from "@wordpress/i18n";
 import { Div, Icon, Button } from "utils/Components";
 import { useToggle } from "utils/hooks";
 
-interface Props {
+type Props = {
 	insert: () => void;
-}
+};
 
 export const ButtonReplace: React.ComponentType<Props> = props => {
 	const { insert } = props;

@@ -6,14 +6,16 @@ import { BlockGroupHeader } from "./BlockGroupHeader";
 import { BlockGroupContent } from "./BlockGroupContent";
 
 export const BlockGroup: React.ComponentType<BlockGroup> = props => {
-	const { id, background_color, title, description, actions, items } = props;
+	const { background_color, title, description, actions, items } = props;
 	const { is_open, toggle } = useToggle();
 	const color_scheme = useColorScheme();
 	const style = {
 		"--background_color": background_color,
 		// TODO: Use a CSS class
 		"--color":
-			color_scheme === "light" ? "rgba(255,255,255,0.85)" : "rgba(0,0,0,0.85)"
+			color_scheme === "light"
+				? "rgba(255,255,255,0.85)"
+				: "rgba(0,0,0,0.85)"
 	};
 
 	return (

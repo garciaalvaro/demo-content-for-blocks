@@ -1,7 +1,7 @@
 import { Div } from "utils/Components";
 import { Item } from "../Item/Item";
 
-interface Props extends Pick<BlockGroup, "actions" | "items"> {}
+type Props = Pick<BlockGroup, "actions" | "items">;
 
 export const BlockGroupContent: React.ComponentType<Props> = props => {
 	const { actions, items } = props;

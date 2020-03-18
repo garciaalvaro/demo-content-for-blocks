@@ -1,9 +1,9 @@
 import { Button, Div, Icon, H3, P } from "utils/Components";
 
-interface Props extends Pick<BlockGroup, "title" | "description"> {
+type Props = Pick<BlockGroup, "title" | "description"> & {
 	is_open: boolean;
 	toggle: Function;
-}
+};
 
 export const BlockGroupHeader: React.ComponentType<Props> = props => {
 	const { is_open, toggle, title, description } = props;
