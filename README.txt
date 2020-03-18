@@ -2,7 +2,7 @@
 Contributors: melonpan
 Tags: gutenberg, demo, demo-content, block, content, blocks, dummy
 Requires at least: 5.2
-Tested up to: 5.3
+Tested up to: 5.4
 Stable tag: 1.1.2
 Requires PHP: 7.1
 License: GPLv3
