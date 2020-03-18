@@ -5,11 +5,11 @@ import { Div, Icon, Button } from "utils/Components";
 import { useToggle } from "utils/hooks";
 import { Position } from "./ItemButtons";
 
-interface Props {
+type Props = {
 	insert: (position: Position) => void;
 	index_after: number;
 	index_last: number;
-}
+};
 
 export const ButtonAdd: React.ComponentType<Props> = props => {
 	const { insert, index_after, index_last } = props;

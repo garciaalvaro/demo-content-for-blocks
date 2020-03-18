@@ -1,6 +1,7 @@
 import { isArray, isObject, isString, forOwn } from "lodash";
 
 export const getMediaDependencies = (
+	// eslint-disable-next-line @typescript-eslint/no-explicit-any
 	attribute: any,
 	namespace: BlockGroup["namespace"]
 ) => {
@@ -21,7 +22,9 @@ export const getMediaDependencies = (
 
 	if (isArray(attribute)) {
 		attribute.forEach(attribute => {
-			media_dependencies.push(...getMediaDependencies(attribute, namespace));
+			media_dependencies.push(
+				...getMediaDependencies(attribute, namespace)
+			);
 		});
 
 		return media_dependencies;
@@ -29,7 +32,9 @@ export const getMediaDependencies = (
 
 	if (isObject(attribute)) {
 		forOwn(attribute, attribute => {
-			media_dependencies.push(...getMediaDependencies(attribute, namespace));
+			media_dependencies.push(
+				...getMediaDependencies(attribute, namespace)
+			);
 		});
 
 		return media_dependencies;

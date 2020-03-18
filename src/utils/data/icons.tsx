@@ -41,8 +41,14 @@ export const icons: Icons = {
 			height="20"
 			viewBox="0 0 20 20"
 		>
-			<polygon points="1,5 10,0 10,10" className={addPrefix("rect-back-1")} />
-			<polygon points="10,0 19,5 10,10" className={addPrefix("rect-back-2")} />
+			<polygon
+				points="1,5 10,0 10,10"
+				className={addPrefix("rect-back-1")}
+			/>
+			<polygon
+				points="10,0 19,5 10,10"
+				className={addPrefix("rect-back-2")}
+			/>
 			<circle cx="10" cy="9" r="5" className={addPrefix("circle")} />
 			<polygon
 				points="1,5 10,10 10,20 1,15"

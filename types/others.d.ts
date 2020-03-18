@@ -1,97 +1,93 @@
-interface ComponentProps extends Object {
-	children?: React.ReactNode;
+interface ComponentProps {
+	// eslint-disable-next-line @typescript-eslint/no-explicit-any
+	[prop: string]: any;
 	id?: string | null;
 	className?: string | null | (string | null)[] | undefined;
+	children?: React.ReactNode;
 }
 
-// TODO
-interface MediaItem extends Object {}
-
-interface UploadedImages {
-	[namespace: string]: {
-		[image_name: string]: {
-			id: number;
-			image_path: string;
-		};
-	};
+interface CustomImageToResolve {
+	// eslint-disable-next-line @typescript-eslint/no-explicit-any
+	[prop: string]: any;
+	dcfb_resolve: Function;
 }
 
-interface UploadedImagesWithMedia {
-	[namespace: string]: {
-		[image_name: string]: {
-			id: number;
-			image_path: string;
-			media: MediaItem;
-		};
-	};
-}
+type MediaItem = {
+	id: number;
+};
 
-interface CustomImage {
-	id: string;
-	name: string;
-	wp_folder: string;
+type NamespaceImage = {
+	id: number;
 	image_path: string;
-}
+};
 
-interface CustomImageRaw {
+type NamespaceImageWithMedia = NamespaceImage & {
+	media: MediaItem;
+};
+
+type UploadedImages = {
+	[namespace: string]: {
+		[image_name: string]: NamespaceImage;
+	};
+};
+
+type UploadedImagesWithMedia = {
+	[namespace: string]: {
+		[image_name: string]: NamespaceImageWithMedia;
+	};
+};
+
+type CustomImageRaw = {
 	name: string;
 	wp_folder?: string;
 	image_path: string;
-}
+};
 
-interface BlockRaw {
+type CustomImage = Required<CustomImageRaw> & {
+	id: string;
+};
+
+type BlockRaw = {
+	// eslint-disable-next-line @typescript-eslint/no-explicit-any
+	attributes?: Record<string, any>;
 	name: string;
-	attributes?: Object;
-	innerBlocks?: BlockRaw[];
 	number_of_instances?: number;
-}
+	innerBlocks?: BlockRaw[];
+};
 
-interface Block {
-	name: string;
-	attributes: Object;
+type Block = Required<Omit<BlockRaw, "innerBlocks">> & {
 	innerBlocks: Block[];
-	number_of_instances: number;
-}
+};
 
-interface ItemRaw {
+type ItemRaw = {
 	title?: string;
 	description?: string;
 	description_list?: string[];
 	description_img_url?: string;
 	blocks?: BlockRaw[];
-}
+};
 
-interface Item {
+type Item = Required<Omit<ItemRaw, "blocks">> & {
+	blocks: Block[];
 	actions: BlockGroup["actions"];
 	id: string;
-	title: string;
-	description: string;
-	description_list: string[];
-	description_img_url: string;
 	media_dependencies: string[];
-	blocks: Block[];
-}
+};
 
-interface BlockGroupRaw {
+type BlockGroupRaw = {
 	background_color?: string;
 	namespace?: string;
 	title?: string;
 	description?: string;
 	post_types?: string[];
-	custom_images?: CustomImageRaw[];
 	actions?: ("add" | "replace")[];
+	custom_images?: CustomImageRaw[];
 	items: ItemRaw[];
-}
+};
 
-interface BlockGroup {
-	id: string;
-	background_color: string;
-	namespace: string;
-	title: string;
-	description: string;
-	post_types: string[];
+type BlockGroup = Required<Omit<BlockGroupRaw, "custom_images" | "items">> & {
 	custom_images: CustomImage[];
-	actions: ("add" | "replace")[];
-	is_active: boolean;
 	items: Item[];
-}
+	id: string;
+	is_active: boolean;
+};

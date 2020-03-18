@@ -9,14 +9,14 @@ import { ItemButtons } from "../ItemButtons/ItemButtons";
 import { ItemHeader } from "./ItemHeader";
 import { ItemImage } from "./ItemImage";
 
-interface WithSelectProps {
+type WithSelectProps = {
 	media_uploaded: State["media_uploaded"];
 	uploaded_images: State["uploaded_images"];
-}
+};
 
-interface OwnProps extends Item {
+type OwnProps = Item & {
 	actions: BlockGroup["actions"];
-}
+};
 
 export const Item: React.ComponentType<OwnProps> = withSelect<
 	WithSelectProps,
@@ -67,7 +67,9 @@ export const Item: React.ComponentType<OwnProps> = withSelect<
 				</Fragment>
 			) : (
 				<Div className="item-notice">
-					<Span>{__("This item uses images that need to be uploaded.")}</Span>
+					<Span>
+						{__("This item uses images that need to be uploaded.")}
+					</Span>
 				</Div>
 			)}
 		</Div>

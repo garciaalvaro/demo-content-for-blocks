@@ -8,14 +8,14 @@ import { forOwn, mapValues, uniq, sortBy } from "lodash";
 import { store_slug } from "utils/data";
 import { parseMediaDependency } from "utils/tools";
 
-interface WithDispatchProps extends Pick<ActionCreators, "updateBlockGroups"> {}
+type WithDispatchProps = Pick<ActionCreators, "updateBlockGroups">;
 
-interface WithSelectProps {
+type WithSelectProps = {
 	uploaded_images: State["uploaded_images"];
 	block_groups: State["block_groups"];
-}
+};
 
-interface Props extends WithDispatchProps, WithSelectProps {}
+type Props = WithDispatchProps & WithSelectProps;
 
 export const SideEffectParseMedia = compose([
 	withDispatch<WithDispatchProps>(dispatch => ({
@@ -58,7 +58,9 @@ export const SideEffectParseMedia = compose([
 				namespace =>
 					mapValues(namespace, image => ({
 						...image,
-						media: media.find(({ id }) => id === image.id) || {}
+						media: media.find(({ id }) => id === image.id) || {
+							id: 0
+						}
 					}))
 			);
 
@@ -66,11 +68,13 @@ export const SideEffectParseMedia = compose([
 				...group,
 				items: group.items.map(item => ({
 					...item,
+
 					description_img_url: parseMediaDependency(
 						item.description_img_url,
 						group.namespace,
 						uploaded_images_with_media
 					),
+
 					blocks: item.blocks.map(block => {
 						if (item.media_dependencies.length) {
 							block.attributes = parseMediaDependency(

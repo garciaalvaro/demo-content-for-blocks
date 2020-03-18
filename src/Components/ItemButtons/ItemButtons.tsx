@@ -12,33 +12,34 @@ export type Position = "after" | "before" | "start" | "end";
 
 type BlockInstance = import("wordpress__blocks").BlockInstance;
 
-interface WithSelectProps {
+type WithSelectProps = {
 	client_ids: string[];
 	index_before: number;
 	index_after: number;
 	index_last: number;
-}
+};
 
-interface WithDispatchProps {
+type WithDispatchProps = {
 	insertBlocks: Function;
 	removeBlocks: Function;
-}
+};
 
-interface OwnProps extends Item {
+type OwnProps = Item & {
 	actions: BlockGroup["actions"];
-}
+};
 
-interface Props extends WithSelectProps, WithDispatchProps, OwnProps {}
+type Props = WithSelectProps & WithDispatchProps & OwnProps;
 
 const createBlocks = (blocks_raw: Block[]): BlockInstance[] => {
 	const blocks: BlockInstance[] = [];
 
-	blocks_raw.forEach(({ name, attributes, innerBlocks, number_of_instances }) =>
-		times(number_of_instances, () => {
-			const inner_blocks = createBlocks(innerBlocks);
+	blocks_raw.forEach(
+		({ name, attributes, innerBlocks, number_of_instances }) =>
+			times(number_of_instances, () => {
+				const inner_blocks = createBlocks(innerBlocks);
 
-			blocks.push(createBlock(name, attributes, inner_blocks));
-		})
+				blocks.push(createBlock(name, attributes, inner_blocks));
+			})
 	);
 
 	return blocks;
@@ -69,7 +70,8 @@ export const ItemButtons: React.ComponentType<OwnProps> = compose([
 		} else if (getFirstMultiSelectedBlockClientId() !== null) {
 			index_before = getBlockIndex(getFirstMultiSelectedBlockClientId());
 			index_after =
-				(getBlockIndex(getLastMultiSelectedBlockClientId()) as number) + 1;
+				(getBlockIndex(getLastMultiSelectedBlockClientId()) as number) +
+				1;
 		}
 
 		return {

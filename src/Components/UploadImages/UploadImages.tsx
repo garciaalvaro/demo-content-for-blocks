@@ -8,12 +8,12 @@ import { Div, Span, P, Button } from "utils/Components";
 import { store_slug } from "utils/data";
 import { withUploadImages, WithUploadImagesProps } from "./withUploadImages";
 
-interface WithSelectProps {
+type WithSelectProps = {
 	images_to_upload_length: number;
 	uploaded_images: State["uploaded_images"];
-}
+};
 
-interface Props extends WithSelectProps, WithUploadImagesProps {}
+type Props = WithSelectProps & WithUploadImagesProps;
 
 export const UploadImages: React.ComponentType = compose([
 	withSelect<WithSelectProps>(select => {
@@ -68,7 +68,10 @@ export const UploadImages: React.ComponentType = compose([
 			{is_uploading ? (
 				<Span>{__("Uploading...")}</Span>
 			) : !error_code ? (
-				<Button onClick={uploadImages} className={["button", "button-text"]}>
+				<Button
+					onClick={uploadImages}
+					className={["button", "button-text"]}
+				>
 					{__("Upload")}
 				</Button>
 			) : null}

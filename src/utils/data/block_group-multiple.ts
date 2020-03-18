@@ -93,7 +93,8 @@ export const block_group: BlockGroupRaw = {
 								id: "dcfb.charles-postiaux-1566455.id",
 								alt: "dcfb.charles-postiaux-1566455.alt_text",
 								link: "dcfb.charles-postiaux-1566455.link",
-								caption: "dcfb.charles-postiaux-1566455.caption.rendered"
+								caption:
+									"dcfb.charles-postiaux-1566455.caption.rendered"
 							},
 							{
 								url:
@@ -101,7 +102,8 @@ export const block_group: BlockGroupRaw = {
 								id: "dcfb.charles-postiaux-1539815.id",
 								alt: "dcfb.charles-postiaux-1539815.alt_text",
 								link: "dcfb.charles-postiaux-1539815.link",
-								caption: "dcfb.charles-postiaux-1539815.caption.rendered"
+								caption:
+									"dcfb.charles-postiaux-1539815.caption.rendered"
 							},
 							{
 								url:
@@ -109,7 +111,8 @@ export const block_group: BlockGroupRaw = {
 								id: "dcfb.charles-postiaux-1551992.id",
 								alt: "dcfb.charles-postiaux-1551992.alt_text",
 								link: "dcfb.charles-postiaux-1551992.link",
-								caption: "dcfb.charles-postiaux-1551992.caption.rendered"
+								caption:
+									"dcfb.charles-postiaux-1551992.caption.rendered"
 							}
 						]
 					}
@@ -119,12 +122,17 @@ export const block_group: BlockGroupRaw = {
 					attributes: { height: 100 }
 				},
 				{
-					name: "core/button",
-					attributes: {
-						align: "center",
-						text: "Viverra",
-						url: "https://example.com/"
-					}
+					name: "core/buttons",
+					attributes: { align: "center" },
+					innerBlocks: [
+						{
+							name: "core/button",
+							attributes: {
+								text: "Viverra",
+								url: "https://example.com/"
+							}
+						}
+					]
 				},
 				{
 					name: "core/paragraph",
@@ -190,7 +198,8 @@ export const block_group: BlockGroupRaw = {
 								id: "dcfb.charles-postiaux-1566455.id",
 								alt: "dcfb.charles-postiaux-1566455.alt_text",
 								link: "dcfb.charles-postiaux-1566455.link",
-								caption: "dcfb.charles-postiaux-1566455.caption.rendered"
+								caption:
+									"dcfb.charles-postiaux-1566455.caption.rendered"
 							},
 							{
 								url:
@@ -198,7 +207,8 @@ export const block_group: BlockGroupRaw = {
 								id: "dcfb.charles-postiaux-1539815.id",
 								alt: "dcfb.charles-postiaux-1539815.alt_text",
 								link: "dcfb.charles-postiaux-1539815.link",
-								caption: "dcfb.charles-postiaux-1539815.caption.rendered"
+								caption:
+									"dcfb.charles-postiaux-1539815.caption.rendered"
 							},
 							{
 								url:
@@ -206,7 +216,8 @@ export const block_group: BlockGroupRaw = {
 								id: "dcfb.charles-postiaux-1551992.id",
 								alt: "dcfb.charles-postiaux-1551992.alt_text",
 								link: "dcfb.charles-postiaux-1551992.link",
-								caption: "dcfb.charles-postiaux-1551992.caption.rendered"
+								caption:
+									"dcfb.charles-postiaux-1551992.caption.rendered"
 							},
 							{
 								url:
@@ -214,7 +225,8 @@ export const block_group: BlockGroupRaw = {
 								id: "dcfb.charles-postiaux-1458142.id",
 								alt: "dcfb.charles-postiaux-1458142.alt_text",
 								link: "dcfb.charles-postiaux-1458142.link",
-								caption: "dcfb.charles-postiaux-1458142.caption.rendered"
+								caption:
+									"dcfb.charles-postiaux-1458142.caption.rendered"
 							}
 						]
 					}
@@ -242,7 +254,8 @@ export const block_group: BlockGroupRaw = {
 								{
 									name: "core/paragraph",
 									attributes: {
-										content: "<strong>Le cursus turpis massa.</strong>"
+										content:
+											"<strong>Le cursus turpis massa.</strong>"
 									}
 								},
 								{
@@ -255,7 +268,8 @@ export const block_group: BlockGroupRaw = {
 								{
 									name: "core/paragraph",
 									attributes: {
-										content: '<a href="https://example.com/">Vitae et leo</a>'
+										content:
+											'<a href="https://example.com/">Vitae et leo</a>'
 									}
 								}
 							]
@@ -266,7 +280,8 @@ export const block_group: BlockGroupRaw = {
 								{
 									name: "core/paragraph",
 									attributes: {
-										content: "<strong>Posuere morbi leo urna.</strong>"
+										content:
+											"<strong>Posuere morbi leo urna.</strong>"
 									}
 								},
 								{
@@ -334,12 +349,18 @@ export const block_group: BlockGroupRaw = {
 					attributes: { height: 100 }
 				},
 				{
-					name: "core/button",
-					attributes: {
-						align: "center",
-						text: "Blandit turpis",
-						url: "https://example.com/"
-					}
+					name: "core/buttons",
+					attributes: { align: "center" },
+					innerBlocks: [
+						{
+							name: "core/button",
+							attributes: {
+								text: "Blandit turpis",
+								url: "https://example.com/",
+								className: "is-style-outline"
+							}
+						}
+					]
 				},
 				{
 					name: "core/paragraph",

@@ -6,23 +6,22 @@ import { withDispatch, withSelect } from "@wordpress/data";
 
 import { store_slug } from "utils/data";
 
-interface WithDispatchProps
-	extends Pick<ActionCreators, "setUploadedImages" | "setMediaUploaded"> {}
+type WithDispatchProps = Pick<
+	ActionCreators,
+	"setUploadedImages" | "setMediaUploaded"
+>;
 
-interface WithSelectProps {
+type WithSelectProps = {
 	images_to_upload: UploadedImages;
-}
+};
 
-export interface WithUploadImagesProps {
+export type WithUploadImagesProps = {
 	uploadImages: Function;
 	error_code: number | null;
 	is_uploading: boolean;
-}
+};
 
-interface Props
-	extends WithDispatchProps,
-		WithSelectProps,
-		WithUploadImagesProps {}
+type Props = WithDispatchProps & WithSelectProps & WithUploadImagesProps;
 
 export const withUploadImages = compose(
 	withDispatch(dispatch => ({
@@ -32,7 +31,9 @@ export const withUploadImages = compose(
 	withSelect(select => ({
 		images_to_upload: select(store_slug).getImagesToUpload()
 	})),
-	(Component: React.ComponentType<WithUploadImagesProps>) => (props: Props) => {
+	(Component: React.ComponentType<WithUploadImagesProps>) => (
+		props: Props
+	) => {
 		const {
 			images_to_upload,
 			setUploadedImages,
