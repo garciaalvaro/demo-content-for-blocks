@@ -1,5 +1,5 @@
 import { defaults, keys, pick, flatten, uniq } from "lodash";
-import uuid from "uuid/v4";
+import { v4 as uuid } from "uuid";
 
 import { getMediaDependencies } from "utils/tools/getMediaDependencies";
 
