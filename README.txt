@@ -51,6 +51,7 @@ Click the More button and inside the menu list click on the plugin name "Demo Co
 == Changelog ==
 
 = 1.2.0 =
+* Fixed block registration bug. Now if a block is not registered it is not included in the item
 * Added linter for development
 * Updated dependencies and types
 * Minor bugfixes
