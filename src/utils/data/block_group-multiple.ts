@@ -122,12 +122,17 @@ export const block_group: BlockGroupRaw = {
 					attributes: { height: 100 }
 				},
 				{
-					name: "core/button",
-					attributes: {
-						align: "center",
-						text: "Viverra",
-						url: "https://example.com/"
-					}
+					name: "core/buttons",
+					attributes: { align: "center" },
+					innerBlocks: [
+						{
+							name: "core/button",
+							attributes: {
+								text: "Viverra",
+								url: "https://example.com/"
+							}
+						}
+					]
 				},
 				{
 					name: "core/paragraph",
@@ -344,12 +349,18 @@ export const block_group: BlockGroupRaw = {
 					attributes: { height: 100 }
 				},
 				{
-					name: "core/button",
-					attributes: {
-						align: "center",
-						text: "Blandit turpis",
-						url: "https://example.com/"
-					}
+					name: "core/buttons",
+					attributes: { align: "center" },
+					innerBlocks: [
+						{
+							name: "core/button",
+							attributes: {
+								text: "Blandit turpis",
+								url: "https://example.com/",
+								className: "is-style-outline"
+							}
+						}
+					]
 				},
 				{
 					name: "core/paragraph",

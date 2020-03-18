@@ -1,5 +1,6 @@
 import { defaults, keys, pick, flatten, uniq } from "lodash";
 import { v4 as uuid } from "uuid";
+import { select } from "@wordpress/data";
 
 import { getMediaDependencies } from "utils/tools/getMediaDependencies";
 
@@ -35,16 +36,20 @@ const group_defaults: BlockGroup = {
 };
 
 const prepareBlocks = (blocks_raw: BlockRaw[]) =>
-	blocks_raw.map<Block>(block_raw => {
+	blocks_raw.reduce<Block[]>((blocks, block_raw) => {
 		const block = defaults(
 			pick(block_raw, keys(block_defaults)),
 			block_defaults
 		);
 
+		const block_type = select("core/blocks").getBlockType(block.name);
+
+		if (!block_type) return blocks;
+
 		block.innerBlocks = prepareBlocks(block.innerBlocks);
 
-		return block;
-	});
+		return [...blocks, block];
+	}, []);
 
 export const prepareBlockGroups = (
 	groups_raw: BlockGroupRaw[],
@@ -59,7 +64,7 @@ export const prepareBlockGroups = (
 
 		group.is_active = group.post_types.includes(current_post_type);
 
-		group.items = group.items.map<Item>(item_raw => {
+		group.items = group.items.reduce<Item[]>((items, item_raw) => {
 			const item = defaults(
 				{ id: uuid() },
 				pick(item_raw, keys(item_defaults)),
@@ -67,6 +72,8 @@ export const prepareBlockGroups = (
 			);
 
 			item.blocks = prepareBlocks(item.blocks);
+
+			if (!item.blocks.length) return items;
 
 			item.media_dependencies = uniq(
 				flatten(
@@ -83,8 +90,8 @@ export const prepareBlockGroups = (
 				)
 			);
 
-			return item;
-		});
+			return [...items, item];
+		}, []);
 
 		return group;
 	});
